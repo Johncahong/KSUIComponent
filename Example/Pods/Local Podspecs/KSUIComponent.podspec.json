@@ -1,0 +1,44 @@
+{
+  "name": "KSUIComponent",
+  "version": "0.1.0",
+  "summary": "A short description of KSUIComponent.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/johncahong/KSUIComponent",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "johncahong": "305455947@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/johncahong/KSUIComponent.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "subspecs": [
+    {
+      "name": "KSHub",
+      "source_files": "KSUIComponent/Classes/KSHub/**/*",
+      "dependencies": {
+        "KSCategory/UIKit/UIButton": [
+
+        ],
+        "Masonry": [
+          "1.1.0"
+        ]
+      }
+    },
+    {
+      "name": "KSLoadingView",
+      "source_files": "KSUIComponent/Classes/KSLoadingView/**/*",
+      "resource_bundles": {
+        "KSLoadingView": [
+          "KSUIComponent/Assets/KSLoadingView/*"
+        ]
+      }
+    }
+  ]
+}

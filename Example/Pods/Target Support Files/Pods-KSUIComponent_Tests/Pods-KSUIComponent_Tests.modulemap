@@ -1,0 +1,6 @@
+framework module Pods_KSUIComponent_Tests {
+  umbrella header "Pods-KSUIComponent_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module KSUIComponent {
+  umbrella header "KSUIComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

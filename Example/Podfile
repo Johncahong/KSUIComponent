@@ -1,0 +1,19 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+source 'https://github.com/Johncahong/HRSpec.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'KSUIComponent_Example' do
+  pod 'KSUIComponent', :path => '../'
+
+  target 'KSUIComponent_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'Expecta'
+    pod 'FBSnapshotTestCase'
+    pod 'Expecta+Snapshots'
+  end
+end
