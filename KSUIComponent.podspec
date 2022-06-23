@@ -1,10 +1,3 @@
-#
-# Be sure to run `pod lib lint KSUIComponent.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = 'KSUIComponent'
@@ -15,7 +8,6 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/johncahong/KSUIComponent'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'johncahong' => '305455947@qq.com' }
   s.source           = { :git => 'https://github.com/johncahong/KSUIComponent.git', :tag => s.version.to_s }
@@ -23,8 +15,8 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
 
-
   ############
+  # subspec表示库的模块，用于划分目录，这样别人导入时才会以目录形式划分，且使用时可以单独导入模块
   s.subspec 'KSHub' do |ss|
       ss.source_files = 'KSUIComponent/Classes/KSHub/**/*'
       ss.dependency 'KSCategory/UIKit/UIButton'
@@ -32,13 +24,13 @@ TODO: Add long description of the pod here.
   end
 
   s.subspec 'KSLoadingView' do |ss|
-    ss.source_files = 'KSUIComponent/Classes/KSLoadingView/**/*'
-    ss.resource_bundles = {
-      'KSLoadingView' => ['KSUIComponent/Assets/KSLoadingView/*']
-    }
+      ss.source_files = 'KSUIComponent/Classes/KSLoadingView/**/*'
+      ss.resource_bundles = {
+        'KSLoadingView' => ['KSUIComponent/Assets/KSLoadingView/*.png']
+      }
+      ss.dependency 'Masonry', '1.1.0'
   end
-  
-  
+
   # s.resource_bundles = {
   #   'KSUIComponent' => ['KSUIComponent/Assets/*.png']
   # }

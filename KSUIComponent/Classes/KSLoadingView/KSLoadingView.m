@@ -60,7 +60,7 @@ static KSLoadingView *loadingView;
 - (UIImage *)imageWithName:(NSString *)imageFileName {
     NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
     NSString *path = [currentBundle pathForResource:imageFileName ofType:nil inDirectory:@"KSLoadingView.bundle"];
-    NSLog(@"---bundle:%@, path:%@", currentBundle, path);
+//    NSLog(@"---bundle:%@, path:%@", currentBundle, path);
     return [UIImage imageWithContentsOfFile:path];
 }
 
